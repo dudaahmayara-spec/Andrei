@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<title>Andrei & Eu ❤️</title>
+<style>
+body {
+    margin: 0;
+    font-family: 'Georgia', serif;
+    background: linear-gradient(to bottom, #f7e8ec, #ffffff);
+    color: #333;
+    text-align: center;
+}
+section {
+    padding: 50px 20px;
+}
+h1, h2 {
+    color: #b44c65;
+}
+.contador {
+    font-size: 1.3em;
+    margin-top: 15px;
+}
+.texto {
+    max-width: 700px;
+    margin: auto;
+    font-size: 1.1em;
+    line-height: 1.8;
+}
+.galeria {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    gap: 12px;
+    max-width: 900px;
+    margin: auto;
+}
+.galeria img {
+    width: 100%;
+    border-radius: 10px;
+}
+footer {
+    padding: 40px 20px;
+    font-size: 1.4em;
+    color: #b44c65;
+}
+audio {
+    margin-top: 20px;
+}
+</style>
+</head>
+
+<body>
+
+<section>
+    <h1>Mais um ano ao seu lado ❤️</h1>
+    <h2>Entrando em 2026 com você, Andrei</h2>
+
+    <div class="contador" id="contador"></div>
+</section>
+
+<section>
+    <div class="texto">
+        <!-- TEXTO EDITÁVEL -->
+        <p>
+            Desde o dia <strong>11 de junho de 2021</strong>, minha vida ganhou um novo significado.
+            Ao seu lado aprendi que amor é cuidado, parceria, paciência e riso até nos dias difíceis.
+        </p>
+
+        <p>
+            Cada momento com você constrói a nossa história, e olhar pra tudo que vivemos
+            me enche de gratidão e esperança por tudo que ainda vamos viver.
+        </p>
+
+        <p>
+            Entrar em 2026 com você é ter certeza de que escolhi meu lar,
+            meu amor e meu melhor amigo.
+        </p>
+        <!-- FIM DO TEXTO EDITÁVEL -->
+    </div>
+
+    <audio controls>
+        <source src="https://www.youtube.com/embed/VIDEO_ID_AQUI" type="audio/mpeg">
+        Seu navegador não suporta áudio.
+    </audio>
+    <p><em>Hugo & Guilherme – Imagina</em></p>
+</section>
+
+<section>
+    <h2>Nossos momentos 📸</h2>
+    <div class="galeria">
+        <!-- TROQUE OS NOMES DAS IMAGENS -->
+        <img src="foto1.jpg">
+        <img src="foto2.jpg">
+        <img src="foto3.jpg">
+        <img src="foto4.jpg">
+        <img src="foto5.jpg">
+        <img src="foto6.jpg">
+        <img src="foto7.jpg">
+        <img src="foto8.jpg">
+        <img src="foto9.jpg">
+        <img src="foto10.jpg">
+        <img src="foto11.jpg">
+        <img src="foto12.jpg">
+        <img src="foto13.jpg">
+        <img src="foto14.jpg">
+        <img src="foto15.jpg">
+        <img src="foto16.jpg">
+        <img src="foto17.jpg">
+        <img src="foto18.jpg">
+        <img src="foto19.jpg">
+        <img src="foto20.jpg">
+    </div>
+</section>
+
+<footer>
+    <strong>para sempre, nós! 🤍</strong>
+</footer>
+
+<script>
+function atualizarContador() {
+    const inicio = new Date("2021-06-11T00:00:00");
+    const agora = new Date();
+
+    let diff = agora - inicio;
+
+    let dias = Math.floor(diff / (1000 * 60 * 60 * 24));
+    let anos = Math.floor(dias / 365);
+    dias %= 365;
+    let meses = Math.floor(dias / 30);
+    dias %= 30;
+
+    document.getElementById("contador").innerHTML =
+        `Estamos juntos há <strong>${anos}</strong> anos, 
+         <strong>${meses}</strong> meses e 
+         <strong>${dias}</strong> dias 💕`;
+}
+
+atualizarContador();
+</script>
+
+</body>
+</html>
